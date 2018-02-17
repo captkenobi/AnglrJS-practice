@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AngularJS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.9/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+
+
+    <div class="container">
+        
+
+
+        <div ng-controller="controller1 as c1">
+            <div ng-controller="controller2 as c2">
+                <div ng-controller="controller3 as c3">
+                    <div class="form-group">
+                        <input type="text" class="form-control" ng-model="c3.name">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" ng-click="c3.hello()">say hello</button>
+                        </span>
+                    </div>
+
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Название</th>
+                                <th>Год издания</th>
+                                <th>Цена</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="book in c3.books">
+                                <td>{{ $index + 1 }}</td>
+                                <td>{{ book.title }}</td>
+                                <td>{{ book.year }}</td>
+                                <td>{{ book.price }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+    
+    
+</body>
+</html>
