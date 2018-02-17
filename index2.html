@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AngularJS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+</head>
+<body>
+
+
+    <div class="container">
+        <div ng-controller="controller1">
+            {{name}}
+        </div>
+        
+        <div ng-controller="controller2">
+            <input type="text" ng-model="name">
+            {{ name }}
+        </div>
+    </div>
+
+
+    <script>
+        
+        (function() {
+            const app = angular.module("myApp", []);
+            
+            app.controller("controller1", function($scope, $rootScope) {
+                // $scope.name = "Anton";
+                // $rootScope.name = "data";
+            });
+
+            app.controller("controller2", function($scope) {
+                // $scope.name="Kate";
+                $scope.name = "Guest";
+            });
+
+        })();
+    
+    </script>
+    
+    
+</body>
+</html>

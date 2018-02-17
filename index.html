@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AngularJS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+</head>
+<body>
+
+
+    <div class="container">
+        <div ng-controller="appController">
+            <h1>{{ var1 }}</h1>
+            <p>{{ obj.var1 }}</p>
+            <p>{{ obj.var2 }}</p>
+        </div>
+    </div>
+
+
+    <script>
+        const data = "Data form DB";
+        
+        (function() {
+            const app = angular.module("myApp", []);
+            
+            app.controller("appController", function($scope) {
+                $scope.var1 = data;
+                $scope.obj = {
+                    "var1": "text",
+                    "var2": 22456
+                };
+            });
+        })()
+    
+    </script>
+    
+    
+</body>
+</html>
