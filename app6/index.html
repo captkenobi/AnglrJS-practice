@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AngularJS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.9/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="controllers/bookscontroller.js"></script>
+    <script src="controllers/maincontroller.js"></script>
+    <script src="services/myfactory.js"></script>
+    <script src="directives/wfmdir.js"></script>
+</head>
+<body>
+
+
+    <div class="container">
+
+        <h1 ng-controller="mainController">Кол-во книг: {{ books.length }}</h1>
+        
+        <div ng-controller="booksController">
+
+
+            <!-- <div class="form-group">
+                <input type="text" class="form-control" ng-model="name">
+                <span class="input-form-control">
+                    <button class="btn btn-default" ng-click="add()">Add</button>
+                </span>
+            </div> -->
+            
+            <wfm-dir></wfm-dir>
+        </div>
+
+
+        
+
+
+    </div>
+
+
+    
+    
+</body>
+</html>

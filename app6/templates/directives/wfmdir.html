@@ -1,0 +1,18 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Название</th>
+            <th>Год издания</th>
+            <th>Цена</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="book in books">
+            <td>{{ $index + 1 }}</td>
+            <td>{{ book.title }}</td>
+            <td>{{ book.year }}</td>
+            <td>{{ book.price }}</td>
+        </tr>
+    </tbody>
+</table>
