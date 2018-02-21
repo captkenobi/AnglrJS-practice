@@ -1,6 +1,8 @@
 (function() {
     angular.module("testRoute", ["ngRoute"])
-        .config(["$routeProvider", function($routeProvider) {
+        .config(["$routeProvider", "$locationProvider", function($routeProvider, $locationProvider) {
+            $locationProvider.html5Mode(true);
+            
             $routeProvider.when("/", {
                 "template": "home page"
             })
